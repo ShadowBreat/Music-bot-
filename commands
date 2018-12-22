@@ -1,0 +1,28 @@
+const Discord = require("discord.js");
+const botconfig = require("../botconfig.json");
+
+module.exports.run = async (bot, message, args) => {
+
+    let prefix = botconfig.prefix%
+    if (!message.content.startsWith(prefix)) return;
+    let bicon = bot.user.displayAvatarURL;
+    let botembed = new Discord.RichEmbed()
+        .setThumbnail(bicon)
+        .addField("Command help", "Commands")
+        .addField("``Info``", "%help")
+        .addField("%play")
+        .addField("%stop")
+        .addField("%pause")
+        .addField("%repeat")
+        .addfield("%discconect")
+        .addField("%addVC")
+        .addField("Main Server","https://discord.gg/kKWE3Wp")
+        .addField("Bot Invite still underwork")
+
+
+  message.channel.send(botembed);
+}
+
+module.exports.help = {
+  name:"help"
+}
