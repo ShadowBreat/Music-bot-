@@ -1,4 +1,5 @@
 # Music-bot-
+Music bot 2.0
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const config = require("./config.json");
